@@ -1,0 +1,7 @@
+.header-box {
+    display: block;
+    max-width: 320px;
+    box-sizing: border-box;
+    margin: auto auto auto auto;
+    padding: 10px 15px 10px 15px;
+}

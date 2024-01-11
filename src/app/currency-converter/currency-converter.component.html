@@ -1,0 +1,39 @@
+<form [formGroup]="currencyConverterForm">
+    <div>
+        <label for="amountInput1">Валюта 1: </label>
+        <input 
+        class="input" 
+        id="amountInput1" 
+        type="number" 
+        formControlName="amount1"
+        pattern="[0-9]*" 
+        maxlength="7" 
+        min="0" 
+        (change)="convertCurrency(1)">
+        <select class="select" formControlName="selectedCurrency1" (change)="convertCurrency(1)">
+            <option value="UAH">UAH</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+        </select>
+    </div>
+    <div>
+        <label for="amountInput2">Валюта 2: </label>
+        <input 
+        class="input" 
+        id="amountInput2" 
+        type="number" 
+        formControlName="amount2" 
+        pattern="[0-9]*" 
+        maxlength="7" 
+        min="0"
+        (change)="convertCurrency(2)">
+        <select class="select" formControlName="selectedCurrency2" (change)="convertCurrency(2)"> 
+            <option value="UAH">UAH</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+        </select>
+    </div>
+</form>
+
+
+
